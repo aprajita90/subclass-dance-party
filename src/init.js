@@ -32,11 +32,20 @@ $(document).ready(function() {
 
   $('.addNewButton').on('click', function(event) {
     var newDancerMakerFunctionName = $(this).data('new-dancer-maker-function-name');
-    console.log(newDancerMakerFunctionName);
     var newDancerMakerFunction = window[newDancerMakerFunctionName];
     var newDancer = new newDancerMakerFunction(
       $( "body").height(0),
-      $( "body").width(1));
+      $( "body").width(3));
     $('body').append(newDancer.$node);
+  });
+
+  $('.addEdButton').on('click', function(event) {
+    var edDanceFunctionName = $(this).data('add-dancer-maker-function-name');
+    debugger;
+    var newEdDanceFunction = window[edDanceFunctionName];
+    var edDancer = new newEdDanceFunction(
+      $( "body").height(0),
+      $( "body").width(3));
+    $('body').append(edDancer.$node);
   });
 });

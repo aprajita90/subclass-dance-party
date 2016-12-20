@@ -17,6 +17,10 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+.addEdButton{
+  padding:5px 12px;
+  float:right;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -30,8 +34,6 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .newDancer{
- background: url('raw.gif');
- border-radius:10px;
- position:absolute;
+ position:relative;
 }
 
