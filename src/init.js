@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -16,7 +17,6 @@ $(document).ready(function() {
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
@@ -29,5 +29,16 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
-});
 
+  $('.addNewButton').on('click', function(event) {
+    debugger;
+    var newDancerMakerFunctionName = $(this).data('new-dancer-maker-function-name');
+    var newDancerMakerFunction = window[newDancerMakerFunctionName];
+    var newDancer = new newDancerMakerFunction(
+      $( "body").height() * Math.random(),
+      $( "body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(newDancer.$node);
+  });
+});

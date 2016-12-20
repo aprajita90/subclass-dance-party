@@ -1,5 +1,4 @@
 var newDancer = function(top, left, timeBetweenSteps) {
-
   makeNewDancer.call(this, top, left, timeBetweenSteps);
 };
 

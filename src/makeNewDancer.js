@@ -8,9 +8,8 @@ var makeNewDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeNewDancer.prototype.blink = function () {
-
-  setTimeout (this.step, this.timeBetweenSteps);
-}.bind(this); 
+  setTimeout (this.step.bind(this), this.timeBetweenSteps);
+}; 
 
 makeNewDancer.prototype.setPosition = function (top, left) {
   this.styleSettings = {

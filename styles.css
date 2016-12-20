@@ -26,8 +26,8 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .newDancer{
-  left: 0px;
-  right: 46px;
- background: url("ed.gif") 0 0;
+ border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
 }
 
