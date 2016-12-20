@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("bg.jpg");
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.newDancer{
+  left: 0px;
+  right: 46px;
+ background: url("ed.gif") 0 0;
+}
+
