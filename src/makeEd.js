@@ -13,3 +13,4 @@ makeEd.prototype.setPosition = function (top, left) {
 
   this.$node.css(this.styleSettings);
 };
+console.log('treats');
