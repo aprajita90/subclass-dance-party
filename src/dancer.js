@@ -8,7 +8,6 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeDancer.prototype.blink = function () {
-
   setTimeout (this.step.bind(this), this.timeBetweenSteps);
 }; 
 

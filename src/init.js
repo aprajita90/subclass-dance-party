@@ -31,14 +31,12 @@ $(document).ready(function() {
   });
 
   $('.addNewButton').on('click', function(event) {
-    debugger;
     var newDancerMakerFunctionName = $(this).data('new-dancer-maker-function-name');
+    console.log(newDancerMakerFunctionName);
     var newDancerMakerFunction = window[newDancerMakerFunctionName];
     var newDancer = new newDancerMakerFunction(
-      $( "body").height() * Math.random(),
-      $( "body").width() * Math.random(),
-      Math.random() * 1000
-    );
+      $( "body").height(0),
+      $( "body").width(1));
     $('body').append(newDancer.$node);
   });
 });

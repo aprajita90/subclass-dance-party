@@ -1,11 +1,9 @@
-var newDancer = function(top, left, timeBetweenSteps) {
-  makeNewDancer.call(this, top, left, timeBetweenSteps);
+var newDancer = function(top, left) {
+  makeNewDancer.call(this, top, left);
 };
-
 newDancer.prototype = Object.create(makeNewDancer.prototype);
 newDancer.prototype.constructor = newDancer;
 
 newDancer.prototype.step = function () {
-  this.blink();
   this.$node.toggle();
 };
