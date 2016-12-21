@@ -6,6 +6,5 @@ edDancer.prototype = Object.create(makeEd.prototype);
 edDancer.prototype.constructor = edDancer;
 
 edDancer.prototype.step = function () {
-  //this.blink();
   this.$node.toggle();
 };

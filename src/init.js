@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.carltonArray = [];
 
 
   $('.addDancerButton').on('click', function(event) {
@@ -19,10 +20,9 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(window.dancers);
     var dancer = new dancerMakerFunction(
-      $( "body").height() * Math.random(),
-      $( "body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     window.dancers.push(dancer);
@@ -33,10 +33,11 @@ $(document).ready(function() {
     var newDancerMakerFunctionName = $(this).data('new-dancer-maker-function-name');
     var newDancerMakerFunction = window[newDancerMakerFunctionName];
     var newDancer = new newDancerMakerFunction(
-      $( "body").height() * Math.random(),
-      $( "body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000 
       );
+    window.carltonArray.push(newDancer);
     window.dancers.push(newDancer);
     $('body').append(newDancer.$node);
   });
@@ -45,8 +46,8 @@ $(document).ready(function() {
     var edDanceFunctionName = $(this).data('add-dancer-maker-function-name');
     var newEdDanceFunction = window[edDanceFunctionName];
     var edDancer = new newEdDanceFunction(
-      $( "body").height() * Math.random(),
-      $( "body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
       );
     $('body').append(edDancer.$node);
@@ -57,10 +58,13 @@ $(document).ready(function() {
     var lineupFunctionName = $(this).data('make-dancer-maker-function-name');
     var newLineUpFunction = window[lineupFunctionName];
     newLineUpFunction();
-    // var edDancer = new newLineUpFunction(
-    //   $( "body").height() * Math.random(),
-    //   $( "body").width() * Math.random(),
-    //   Math.random() * 1000
-    //   );
+  });
+
+  $('.addNewButton').on('click', function(event) {
+    for (var i = 0; i < dancers.length; i ++) {
+      if (i % 2 === 0) {
+        window.dancers[i].$node.addClass('switch');
+      }
+    }
   });
 });

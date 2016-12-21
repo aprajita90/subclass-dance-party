@@ -32,3 +32,28 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+
+describe('spinnedDancer', function() {
+  var spinnededDancer;
+
+  beforeEach(function() {
+    spinnededDancer = new edDancer(10, 20);
+  });
+  it('should have a jQuery $node object', function() {
+    expect(spinnedDancer.$node).to.be.an.instanceof(jQuery);
+  });
+});
+
+// describe('newDancer', function() {
+
+//   var newDancer;
+
+//   beforeEach(function() {
+//     newDancer = new newDancer(10, 20);
+//   });
+
+//   it('should have a jQuery $node object', function() {
+//     expect(newDancer.$node).to.be.an.instanceof(jQuery);
+//   });
+// });

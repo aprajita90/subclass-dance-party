@@ -2,6 +2,7 @@ var makeEd = function(top, left) {
   this.top = top;
   this.left = left;
   this.$node = $('<img src = "ed.gif" class = "edDance" />');
+  debugger;
   this.setPosition(top, left);
 
 };
