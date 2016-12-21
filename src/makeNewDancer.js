@@ -1,12 +1,14 @@
 var makeNewDancer = function(top, left) {
   this.top = top;
   this.left = left;
-  this.$node = $('<span class="newDancer"><img src = "dance.gif"></span>');
-  this.setPosition();
+  this.$node = $('<span><img src = "dance.gif" class = "newDancer"></span>');
+  this.setPosition(top, left);
 };
 
-makeNewDancer.prototype.setPosition = function () {
+makeNewDancer.prototype.setPosition = function (top, left) {
   this.styleSettings = {
+    top: top,
+    left: left
   };
   this.$node.css(this.styleSettings);
 };

@@ -34,8 +34,10 @@ $(document).ready(function() {
     var newDancerMakerFunctionName = $(this).data('new-dancer-maker-function-name');
     var newDancerMakerFunction = window[newDancerMakerFunctionName];
     var newDancer = new newDancerMakerFunction(
-      $( "body").height(0),
-      $( "body").width(3));
+      $( "body").height() * Math.random(),
+      $( "body").width() * Math.random(),
+      Math.random() * 1000 
+      );
     $('body').append(newDancer.$node);
   });
 
@@ -44,8 +46,15 @@ $(document).ready(function() {
     debugger;
     var newEdDanceFunction = window[edDanceFunctionName];
     var edDancer = new newEdDanceFunction(
-      $( "body").height(0),
-      $( "body").width(3));
+      $( "body").height() * Math.random(),
+      $( "body").width() * Math.random(),
+      Math.random() * 1000
+      );
     $('body').append(edDancer.$node);
+  });
+
+
+  $('.addEdButton').click(function() {
+    $(this).animate({'left': '+=50px'}, 'slow');
   });
 });
