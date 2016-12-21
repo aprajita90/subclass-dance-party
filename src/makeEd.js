@@ -1,8 +1,7 @@
 var makeEd = function(top, left) {
   this.top = top;
   this.left = left;
-  this.$node = $('<span><img src = "ed.gif" class = "edDance"></span>');
-  debugger;
+  this.$node = $('<img src = "ed.gif" class = "edDance" />');
   this.setPosition(top, left);
 };
 makeEd.prototype.setPosition = function (top, left) {

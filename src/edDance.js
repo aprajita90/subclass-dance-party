@@ -7,5 +7,5 @@ edDancer.prototype.constructor = edDancer;
 
 edDancer.prototype.step = function () {
   //this.blink();
-  this.$node.animate( {"this.top":"+=50px","this.left": "+=50px"}, "slow" );
+  this.$node.toggle();
 };

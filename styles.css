@@ -54,13 +54,16 @@ body, a:link, a:visited, a:active{
   animation-name: example;
   animation-duration: 20s;
  animation-direction: reverse;
- position: relative;
+ position: absolute;
 }
 .edDance{
   animation-name: edDance;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-
-
+  position: absolute;
+}
+.lineup{
+  padding:5px 12px;
+  float:right;
 }
