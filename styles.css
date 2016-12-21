@@ -56,6 +56,12 @@ body, a:link, a:visited, a:active{
  animation-direction: reverse;
  position: absolute;
 }
+
+img:hover{
+  height: 100px;
+  width: 100px;
+}
+
 .edDance{
   animation-name: edDance;
   animation-duration: 1.5s;
